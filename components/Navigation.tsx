@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { steps, getRandomStep, dailyReflections, getRandomReflection } from "@/lib/steps";
+import { steps, getRandomReflection } from "@/lib/steps";
 
 export function Navigation() {
   const [activeStep, setActiveStep] = useState(0);
