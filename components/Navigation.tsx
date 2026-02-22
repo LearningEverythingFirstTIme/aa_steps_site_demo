@@ -109,63 +109,64 @@ export function Navigation() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 className="w-full max-w-2xl max-h-[85vh] bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto pointer-events-auto"
               >
-              <div className="p-6 md:p-10">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-[var(--gold)] text-sm tracking-[0.3em] uppercase font-display">
-                    Daily Reflection
-                  </span>
-                  <button
-                    onClick={() => setShowDailyReflection(false)}
-                    className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors text-2xl"
-                  >
-                    ×
-                  </button>
-                </div>
+                <div className="p-6 md:p-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-[var(--gold)] text-sm tracking-[0.3em] uppercase font-display">
+                      Daily Reflection
+                    </span>
+                    <button
+                      onClick={() => setShowDailyReflection(false)}
+                      className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors text-2xl"
+                    >
+                      ×
+                    </button>
+                  </div>
 
-                <div className="text-center mb-8">
-                  <span className="font-display text-6xl md:text-8xl text-[var(--gold)]/20">
-                    {dailyStep.roman}
-                  </span>
-                </div>
+                  <div className="text-center mb-8">
+                    <span className="font-display text-6xl md:text-8xl text-[var(--gold)]/20">
+                      {dailyStep.roman}
+                    </span>
+                  </div>
 
-                <h3 className="font-body text-xl md:text-2xl text-[var(--text-primary)] mb-6 leading-relaxed">
-                  {dailyStep.title}
-                </h3>
+                  <h3 className="font-body text-xl md:text-2xl text-[var(--text-primary)] mb-6 leading-relaxed">
+                    {dailyStep.title}
+                  </h3>
 
-                <div className="p-4 md:p-6 bg-[var(--void)]/50 rounded-lg mb-6">
-                  <p className="text-[var(--text-secondary)] italic mb-3">
-                    &ldquo;{dailyStep.quote.text}&rdquo;
-                  </p>
-                  <p className="text-[var(--text-muted)] text-sm">
-                    — {dailyStep.quote.source}
-                  </p>
-                </div>
+                  <div className="p-4 md:p-6 bg-[var(--void)]/50 rounded-lg mb-6">
+                    <p className="text-[var(--text-secondary)] italic mb-3">
+                      &ldquo;{dailyStep.quote.text}&rdquo;
+                    </p>
+                    <p className="text-[var(--text-muted)] text-sm">
+                      — {dailyStep.quote.source}
+                    </p>
+                  </div>
 
-                <div className="p-4 md:p-6 border border-[var(--gold)]/20 rounded-lg">
-                  <p className="text-[var(--gold)] text-sm tracking-[0.2em] uppercase mb-2 font-display">
-                    Today&apos;s Question
-                  </p>
-                  <p className="text-[var(--text-secondary)] italic">
-                    {dailyStep.reflection}
-                  </p>
-                </div>
+                  <div className="p-4 md:p-6 border border-[var(--gold)]/20 rounded-lg">
+                    <p className="text-[var(--gold)] text-sm tracking-[0.2em] uppercase mb-2 font-display">
+                      Today&apos;s Question
+                    </p>
+                    <p className="text-[var(--text-secondary)] italic">
+                      {dailyStep.reflection}
+                    </p>
+                  </div>
 
-                <div className="flex gap-3 mt-8">
-                  <button
-                    onClick={() => {
-                      setShowDailyReflection(false);
-                      scrollToStep(dailyStep.id);
-                    }}
-                    className="flex-1 px-4 py-3 bg-[var(--gold)] text-[var(--void)] font-display text-sm tracking-wide rounded hover:bg-[var(--gold-light)] transition-colors"
-                  >
-                    Read Full Step
-                  </button>
-                  <button
-                    onClick={handleDailyReflection}
-                    className="flex-1 px-4 py-3 border border-[var(--gold)]/30 text-[var(--gold)] font-display text-sm tracking-wide rounded hover:bg-[var(--gold)]/10 transition-colors"
-                  >
-                    Another Reflection
-                  </button>
+                  <div className="flex gap-3 mt-8">
+                    <button
+                      onClick={() => {
+                        setShowDailyReflection(false);
+                        scrollToStep(dailyStep.id);
+                      }}
+                      className="flex-1 px-4 py-3 bg-[var(--gold)] text-[var(--void)] font-display text-sm tracking-wide rounded hover:bg-[var(--gold-light)] transition-colors"
+                    >
+                      Read Full Step
+                    </button>
+                    <button
+                      onClick={handleDailyReflection}
+                      className="flex-1 px-4 py-3 border border-[var(--gold)]/30 text-[var(--gold)] font-display text-sm tracking-wide rounded hover:bg-[var(--gold)]/10 transition-colors"
+                    >
+                      Another Reflection
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             </div>
