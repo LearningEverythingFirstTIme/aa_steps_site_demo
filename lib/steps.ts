@@ -694,7 +694,8 @@ export const dailyReflections: DailyReflection[] = [
     source: "Mahatma Gandhi (quoted in AA)",
     theme: "forgiveness"
   },
-  quote: "An eye for an eye will only make the whole world blind.",
+  {
+    quote: "An eye for an eye will only make the whole world blind.",
     source: "Mahatma Gandhi (quoted in AA)",
     theme: "forgiveness"
   },
