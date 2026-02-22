@@ -149,7 +149,7 @@ export function getStepById(id: number): Step | undefined {
   return steps.find(step => step.id === id);
 }
 
-// Extended collection of daily reflections and quotes from AA history
+// Extended collection of daily reflections from AA literature and conference-approved sources
 export interface DailyReflection {
   quote: string;
   source: string;
@@ -157,7 +157,7 @@ export interface DailyReflection {
 }
 
 export const dailyReflections: DailyReflection[] = [
-  // Bill Wilson Wisdom
+  // Bill Wilson - Co-founder of AA
   {
     quote: "The great fact is just this, and nothing less: That we have had deep and effective spiritual experiences which have revolutionized our whole attitude toward life, toward our fellows and toward God's universe.",
     source: "Bill Wilson, Big Book",
@@ -208,7 +208,32 @@ export const dailyReflections: DailyReflection[] = [
     source: "Bill Wilson, Big Book",
     theme: "unity"
   },
-  // Dr. Bob Smith
+  {
+    quote: "Faith is not belief without proof, but trust without reservation.",
+    source: "Bill Wilson",
+    theme: "faith"
+  },
+  {
+    quote: "The Twelve Steps are a group of principles, spiritual in their nature, which, if practiced as a way of life, can expel the obsession to drink and enable the sufferer to become happily and usefully whole.",
+    source: "Bill Wilson, 12&12",
+    theme: "steps"
+  },
+  {
+    quote: "We found that as soon as we were able to lay aside prejudice and express even a willingness to believe in a Power greater than ourselves, we commenced to get results.",
+    source: "Bill Wilson, Big Book",
+    theme: "open-mindedness"
+  },
+  {
+    quote: "To the intellectually self-sufficient man or woman, many A.A.'s can say, 'Yes, we were like you—far too smart for our own good. We loved to dazzle others with our knowledge and to argue them down.'",
+    source: "Bill Wilson, 12&12",
+    theme: "humility"
+  },
+  {
+    quote: "The only radical remedy I know for egotism is to get down on our knees and ask for help from a Power greater than ourselves.",
+    source: "Bill Wilson",
+    theme: "prayer"
+  },
+  // Dr. Bob Smith - Co-founder of AA
   {
     quote: "Keep it simple.",
     source: "Dr. Bob Smith",
@@ -224,7 +249,12 @@ export const dailyReflections: DailyReflection[] = [
     source: "Dr. Bob Smith",
     theme: "humility"
   },
-  // Big Book Classics
+  {
+    quote: "Love and service are the keys.",
+    source: "Dr. Bob Smith",
+    theme: "service"
+  },
+  // Big Book - Alcoholics Anonymous
   {
     quote: "Rarely have we seen a person fail who has thoroughly followed our path.",
     source: "Alcoholics Anonymous (Big Book)",
@@ -250,59 +280,60 @@ export const dailyReflections: DailyReflection[] = [
     source: "Big Book",
     theme: "faith"
   },
+  // The Promises
   {
     quote: "We are going to know a new freedom and a new happiness.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "promises"
   },
   {
     quote: "We will not regret the past nor wish to shut the door on it.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "acceptance"
   },
   {
     quote: "We will comprehend the word serenity and we will know peace.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "serenity"
   },
   {
     quote: "No matter how far down the scale we have gone, we will see how our experience can benefit others.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "service"
   },
   {
     quote: "That feeling of uselessness and self-pity will disappear.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "self-worth"
   },
   {
     quote: "We will lose interest in selfish things and gain interest in our fellows.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "fellowship"
   },
   {
     quote: "Self-seeking will slip away.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "selflessness"
   },
   {
     quote: "Our whole attitude and outlook upon life will change.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "transformation"
   },
   {
     quote: "Fear of people and of economic insecurity will leave us.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "fearlessness"
   },
   {
     quote: "We will intuitively know how to handle situations which used to baffle us.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "intuition"
   },
   {
     quote: "We will suddenly realize that God is doing for us what we could not do for ourselves.",
-    source: "Big Book, Promises",
+    source: "Big Book, The Promises",
     theme: "miracles"
   },
   // Twelve Steps and Twelve Traditions
@@ -336,7 +367,27 @@ export const dailyReflections: DailyReflection[] = [
     source: "12&12, Tradition Twelve",
     theme: "anonymity"
   },
-  // AA Sayings and Slogans
+  {
+    quote: "True ambition is not what we thought it was. It is not the drive to be top dog. It is the desire to be of maximum service to God and the people about us.",
+    source: "12&12",
+    theme: "service"
+  },
+  {
+    quote: "We cannot subscribe to the belief that this life is a vale of tears, though it once was just that for many of us.",
+    source: "12&12",
+    theme: "joy"
+  },
+  {
+    quote: "When we are willing to place the welfare of others ahead of our own selfish desires, we are on the way to true usefulness and lasting happiness.",
+    source: "12&12",
+    theme: "happiness"
+  },
+  {
+    quote: "The practice of prayer and meditation, as outlined in Step Eleven, is essential to our continued sobriety and spiritual growth.",
+    source: "12&12",
+    theme: "prayer"
+  },
+  // AA Slogans and Sayings
   {
     quote: "One day at a time.",
     source: "AA Slogan",
@@ -437,297 +488,247 @@ export const dailyReflections: DailyReflection[] = [
     source: "AA Saying",
     theme: "action"
   },
-  // Spiritual Wisdom
-  {
-    quote: "Grant me the serenity to accept the things I cannot change, the courage to change the things I can, and the wisdom to know the difference.",
-    source: "Serenity Prayer",
-    theme: "serenity"
-  },
-  {
-    quote: "God, grant me the serenity...",
-    source: "Reinhold Niebuhr",
-    theme: "prayer"
-  },
-  {
-    quote: "Lord, make me a channel of Thy peace.",
-    source: "St. Francis Prayer",
-    theme: "service"
-  },
-  {
-    quote: "Where there is hatred, let me sow love; where there is injury, pardon; where there is doubt, faith.",
-    source: "St. Francis Prayer",
-    theme: "love"
-  },
-  // Recovery Wisdom
-  {
-    quote: "Recovery is not a destination, it's a journey.",
-    source: "AA Wisdom",
-    theme: "journey"
-  },
-  {
-    quote: "The only meeting you ever have to go to is the next one.",
-    source: "AA Wisdom",
-    theme: "meetings"
-  },
-  {
-    quote: "I came for the drinking, I stayed for the thinking.",
-    source: "AA Wisdom",
-    theme: "growth"
-  },
   {
     quote: "Sobriety delivers everything alcohol promised.",
-    source: "AA Wisdom",
+    source: "AA Saying",
     theme: "promises"
   },
   {
-    quote: "The pain of the process is temporary, but the gifts of recovery are permanent.",
-    source: "AA Wisdom",
-    theme: "process"
+    quote: "I came for the drinking, I stayed for the thinking.",
+    source: "AA Saying",
+    theme: "growth"
   },
   {
-    quote: "We are not human beings having a spiritual experience. We are spiritual beings having a human experience.",
-    source: "Pierre Teilhard de Chardin (often quoted in AA)",
-    theme: "spirituality"
+    quote: "The only meeting you ever have to go to is the next one.",
+    source: "AA Saying",
+    theme: "meetings"
   },
   {
-    quote: "Courage is not the absence of fear, but rather the judgment that something else is more important than fear.",
-    source: "Ambrose Redmoon (quoted in AA)",
-    theme: "courage"
-  },
-  {
-    quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-    source: "Will Durant (often quoted in AA)",
-    theme: "habits"
-  },
-  {
-    quote: "The darkest hour is just before the dawn.",
-    source: "Thomas Fuller (quoted in AA)",
-    theme: "hope"
+    quote: "Recovery is not a destination, it's a journey.",
+    source: "AA Saying",
+    theme: "journey"
   },
   {
     quote: "When I stopped living in the problem and began living in the answer, the problem went away.",
-    source: "AA Wisdom",
+    source: "AA Saying",
     theme: "solution"
   },
   {
-    quote: "I can do something for 24 hours that would appall me if I felt I had to keep it up for a lifetime.",
-    source: "Big Book",
-    theme: "one day"
-  },
-  {
-    quote: "The worth of every conviction consists precisely in the steadfastness with which it is held.",
-    source: "Jane Harrison (quoted in AA)",
-    theme: "conviction"
-  },
-  {
     quote: "We are not responsible for our disease, but we are responsible for our recovery.",
-    source: "AA Wisdom",
+    source: "AA Saying",
     theme: "responsibility"
   },
   {
-    quote: "The only person you are destined to become is the person you decide to be.",
-    source: "Ralph Waldo Emerson (quoted in AA)",
-    theme: "choice"
+    quote: "The pain of the process is temporary, but the gifts of recovery are permanent.",
+    source: "AA Saying",
+    theme: "process"
   },
   {
-    quote: "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
-    source: "Ralph Waldo Emerson (quoted in AA)",
-    theme: "inner strength"
+    quote: "I can do something for 24 hours that would appall me if I felt I had to keep it up for a lifetime.",
+    source: "AA Saying",
+    theme: "one day"
   },
   {
-    quote: "The best time to plant a tree was 20 years ago. The second best time is now.",
-    source: "Chinese Proverb (quoted in AA)",
-    theme: "now"
+    quote: "Cultivate the habit of being grateful for every good thing that comes to you, and to give thanks continuously.",
+    source: "AA Saying",
+    theme: "gratitude"
+  },
+  // More Big Book Wisdom
+  {
+    quote: "We alcoholics are men and women who have lost the ability to control our drinking.",
+    source: "Big Book",
+    theme: "admission"
   },
   {
-    quote: "You miss 100% of the shots you don't take.",
-    source: "Wayne Gretzky (quoted in AA)",
-    theme: "action"
-  },
-  {
-    quote: "It does not matter how slowly you go as long as you do not stop.",
-    source: "Confucius (quoted in AA)",
-    theme: "persistence"
-  },
-  {
-    quote: "Everything you've ever wanted is on the other side of fear.",
-    source: "George Addair (quoted in AA)",
-    theme: "fear"
-  },
-  {
-    quote: "Hardships often prepare ordinary people for an extraordinary destiny.",
-    source: "C.S. Lewis (quoted in AA)",
-    theme: "purpose"
-  },
-  {
-    quote: "Believe you can and you're halfway there.",
-    source: "Theodore Roosevelt (quoted in AA)",
-    theme: "belief"
-  },
-  {
-    quote: "The only impossible journey is the one you never begin.",
-    source: "Tony Robbins (quoted in AA)",
-    theme: "beginning"
-  },
-  {
-    quote: "Your present circumstances don't determine where you can go; they merely determine where you start.",
-    source: "Nido Qubein (quoted in AA)",
-    theme: "possibility"
-  },
-  {
-    quote: "Act as if what you do makes a difference. It does.",
-    source: "William James (quoted in AA)",
-    theme: "action"
-  },
-  {
-    quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    source: "Winston Churchill (quoted in AA)",
-    theme: "courage"
-  },
-  {
-    quote: "What we fear doing most is usually what we most need to do.",
-    source: "Tim Ferriss (quoted in AA)",
-    theme: "fear"
-  },
-  {
-    quote: "The secret of getting ahead is getting started.",
-    source: "Mark Twain (quoted in AA)",
-    theme: "action"
-  },
-  {
-    quote: "Don't watch the clock; do what it does. Keep going.",
-    source: "Sam Levenson (quoted in AA)",
-    theme: "perseverance"
-  },
-  {
-    quote: "The future belongs to those who believe in the beauty of their dreams.",
-    source: "Eleanor Roosevelt (quoted in AA)",
-    theme: "dreams"
-  },
-  {
-    quote: "It is during our darkest moments that we must focus to see the light.",
-    source: "Aristotle (quoted in AA)",
-    theme: "hope"
-  },
-  {
-    quote: "Whoever is happy will make others happy too.",
-    source: "Anne Frank (quoted in AA)",
-    theme: "joy"
-  },
-  {
-    quote: "You will face many defeats in life, but never let yourself be defeated.",
-    source: "Maya Angelou (quoted in AA)",
-    theme: "resilience"
-  },
-  {
-    quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    source: "Nelson Mandela (quoted in AA)",
-    theme: "resilience"
-  },
-  {
-    quote: "In the middle of difficulty lies opportunity.",
-    source: "Albert Einstein (quoted in AA)",
-    theme: "opportunity"
-  },
-  {
-    quote: "The way to get started is to quit talking and begin doing.",
-    source: "Walt Disney (quoted in AA)",
-    theme: "action"
-  },
-  {
-    quote: "Life is what happens when you're busy making other plans.",
-    source: "John Lennon (quoted in AA)",
+    quote: "We know that no real alcoholic ever recovers control.",
+    source: "Big Book",
     theme: "acceptance"
   },
   {
-    quote: "The only way to do great work is to love what you do.",
-    source: "Steve Jobs (quoted in AA)",
-    theme: "passion"
+    quote: "The fact is that most alcoholics, for reasons yet obscure, have lost the power of choice in drink.",
+    source: "Big Book",
+    theme: "powerlessness"
   },
   {
-    quote: "If you really look closely, most overnight successes took a long time.",
-    source: "Steve Jobs (quoted in AA)",
-    theme: "patience"
+    quote: "Our liquor was but a symptom. So we had to get down to causes and conditions.",
+    source: "Big Book",
+    theme: "self-reflection"
   },
   {
-    quote: "Your work is going to fill a large part of your life. The only way to be truly satisfied is to do what you believe is great work.",
-    source: "Steve Jobs (quoted in AA)",
-    theme: "purpose"
+    quote: "Therefore, the main problem of the alcoholic centers in his mind, rather than in his body.",
+    source: "Big Book",
+    theme: "mind"
   },
   {
-    quote: "Stay hungry, stay foolish.",
-    source: "Steve Jobs (quoted in AA)",
-    theme: "curiosity"
+    quote: "If you are as seriously alcoholic as we were, we believe there is no middle-of-the-road solution.",
+    source: "Big Book",
+    theme: "commitment"
   },
   {
-    quote: "The people who are crazy enough to think they can change the world are the ones who do.",
-    source: "Steve Jobs (quoted in AA)",
-    theme: "change"
+    quote: "We alcoholics are suffering from a disease which only a spiritual experience will conquer.",
+    source: "Big Book",
+    theme: "spiritual solution"
   },
   {
-    quote: "I have not failed. I've just found 10,000 ways that won't work.",
-    source: "Thomas Edison (quoted in AA)",
-    theme: "persistence"
+    quote: "To one who feels he is an atheist or agnostic such an experience seems impossible, but to continue as he is means disaster.",
+    source: "Big Book",
+    theme: "open-mindedness"
   },
   {
-    quote: "Genius is one percent inspiration and ninety-nine percent perspiration.",
-    source: "Thomas Edison (quoted in AA)",
-    theme: "effort"
+    quote: "We found that as soon as we were able to lay aside prejudice and express even a willingness to believe in a Power greater than ourselves, we commenced to get results.",
+    source: "Big Book",
+    theme: "willingness"
   },
   {
-    quote: "Many of life's failures are people who did not realize how close they were to success when they gave up.",
-    source: "Thomas Edison (quoted in AA)",
-    theme: "perseverance"
+    quote: "The spiritual life is not a theory. We have to live it.",
+    source: "Big Book",
+    theme: "practice"
   },
   {
-    quote: "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
-    source: "Thomas Edison (quoted in AA)",
-    theme: "try again"
+    quote: "We have entered the world of the Spirit. Our next function is to grow in understanding and effectiveness.",
+    source: "Big Book",
+    theme: "growth"
   },
   {
-    quote: "Be the change that you wish to see in the world.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "change"
+    quote: "This is the how and why of it. First of all, we had to quit playing God. It didn't work.",
+    source: "Big Book",
+    theme: "surrender"
   },
   {
-    quote: "The weak can never forgive. Forgiveness is the attribute of the strong.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "forgiveness"
+    quote: "Next, we decided that hereafter in this drama of life, God was going to be our Director.",
+    source: "Big Book",
+    theme: "guidance"
   },
   {
-    quote: "An eye for an eye will only make the whole world blind.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "forgiveness"
+    quote: "He is the Principal; we are His agents. He is the Father, and we are His children.",
+    source: "Big Book",
+    theme: "relationship"
   },
   {
-    quote: "Happiness is when what you think, what you say, and what you do are in harmony.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "integrity"
+    quote: "Most good ideas are simple, and this concept was the keystone of the new and triumphant arch through which we passed to freedom.",
+    source: "Big Book",
+    theme: "simplicity"
   },
   {
-    quote: "The best way to find yourself is to lose yourself in the service of others.",
-    source: "Mahatma Gandhi (quoted in AA)",
+    quote: "When we sincerely took such a position, all sorts of remarkable things followed.",
+    source: "Big Book",
+    theme: "miracles"
+  },
+  {
+    quote: "We had a new Employer. Being all powerful, He provided what we needed, if we kept close to Him and performed His work well.",
+    source: "Big Book",
+    theme: "provision"
+  },
+  {
+    quote: "Established on such a footing we became less and less interested in ourselves, our little plans and designs.",
+    source: "Big Book",
+    theme: "selflessness"
+  },
+  {
+    quote: "More and more we became interested in seeing what we could contribute to life.",
+    source: "Big Book",
     theme: "service"
   },
   {
-    quote: "Strength does not come from physical capacity. It comes from an indomitable will.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "will"
+    quote: "As we felt new power flow in, as we enjoyed peace of mind, as we discovered we could face life successfully, as we became conscious of His presence, we began to lose our fear of today, tomorrow or the hereafter.",
+    source: "Big Book",
+    theme: "peace"
   },
   {
-    quote: "Live as if you were to die tomorrow. Learn as if you were to live forever.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "learning"
+    quote: "We were reborn.",
+    source: "Big Book",
+    theme: "rebirth"
+  },
+  // AA Preamble
+  {
+    quote: "Alcoholics Anonymous is a fellowship of men and women who share their experience, strength and hope with each other that they may solve their common problem and help others to recover from alcoholism.",
+    source: "AA Preamble",
+    theme: "fellowship"
   },
   {
-    quote: "The future depends on what you do today.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "today"
+    quote: "The only requirement for membership is a desire to stop drinking.",
+    source: "AA Preamble",
+    theme: "inclusivity"
   },
   {
-    quote: "You must be the change you wish to see in the world.",
-    source: "Mahatma Gandhi (quoted in AA)",
-    theme: "example"
+    quote: "There are no dues or fees for AA membership; we are self-supporting through our own contributions.",
+    source: "AA Preamble",
+    theme: "self-support"
+  },
+  {
+    quote: "AA is not allied with any sect, denomination, politics, organization or institution; does not wish to engage in any controversy; neither endorses nor opposes any causes.",
+    source: "AA Preamble",
+    theme: "neutrality"
+  },
+  {
+    quote: "Our primary purpose is to stay sober and help other alcoholics to achieve sobriety.",
+    source: "AA Preamble",
+    theme: "primary purpose"
+  },
+  // Responsibility Statement
+  {
+    quote: "I am responsible. When anyone, anywhere, reaches out for help, I want the hand of AA always to be there. And for that: I am responsible.",
+    source: "AA Responsibility Statement",
+    theme: "responsibility"
+  },
+  // Serenity Prayer
+  {
+    quote: "God, grant me the serenity to accept the things I cannot change, the courage to change the things I can, and the wisdom to know the difference.",
+    source: "Serenity Prayer",
+    theme: "serenity"
+  },
+  // St. Francis Prayer (used in AA)
+  {
+    quote: "Lord, make me a channel of thy peace—that where there is hatred, I may bring love—that where there is wrong, I may bring the spirit of forgiveness.",
+    source: "St. Francis Prayer (AA)",
+    theme: "peace"
+  },
+  {
+    quote: "Where there is discord, I may bring harmony—where there is error, I may bring truth—where there is doubt, I may bring faith.",
+    source: "St. Francis Prayer (AA)",
+    theme: "harmony"
+  },
+  {
+    quote: "Where there is despair, I may bring hope—where there are shadows, I may bring light—where there is sadness, I may bring joy.",
+    source: "St. Francis Prayer (AA)",
+    theme: "hope"
+  },
+  {
+    quote: "Grant that I may seek rather to comfort than to be comforted—to understand, than to be understood—to love, than to be loved.",
+    source: "St. Francis Prayer (AA)",
+    theme: "love"
+  },
+  {
+    quote: "For it is by self-forgetting that one finds. It is by forgiving that one is forgiven. It is by dying that one awakens to Eternal Life.",
+    source: "St. Francis Prayer (AA)",
+    theme: "surrender"
+  },
+  // Third Step Prayer
+  {
+    quote: "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will.",
+    source: "Third Step Prayer",
+    theme: "surrender"
+  },
+  {
+    quote: "Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life.",
+    source: "Third Step Prayer",
+    theme: "help"
+  },
+  {
+    quote: "May I do Thy will always!",
+    source: "Third Step Prayer",
+    theme: "willingness"
+  },
+  // Seventh Step Prayer
+  {
+    quote: "My Creator, I am now willing that you should have all of me, good and bad. I pray that you now remove from me every single defect of character which stands in the way of my usefulness to you and my fellows.",
+    source: "Seventh Step Prayer",
+    theme: "character"
+  },
+  {
+    quote: "Grant me strength, as I go out from here, to do your bidding. Amen.",
+    source: "Seventh Step Prayer",
+    theme: "strength"
   }
 ];
 
