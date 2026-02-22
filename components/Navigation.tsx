@@ -106,7 +106,17 @@ export function Navigation() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-2xl max-h-[85vh] z-[70] bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto"
+              style={{
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: 'calc(100% - 2rem)',
+                maxWidth: '42rem',
+                maxHeight: '85vh',
+                zIndex: 70,
+              }}
+              className="bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto"
             >
               <div className="p-6 md:p-10">
                 <div className="flex items-center justify-between mb-6">
