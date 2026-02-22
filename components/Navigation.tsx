@@ -103,10 +103,10 @@ export function Navigation() {
               className="fixed inset-0 z-[60] bg-[var(--void)]/90 backdrop-blur-sm"
             />
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed inset-4 md:inset-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-2xl md:max-h-[80vh] z-[70] bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-2xl max-h-[85vh] z-[70] bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto"
             >
               <div className="p-6 md:p-10">
                 <div className="flex items-center justify-between mb-6">

@@ -138,17 +138,17 @@
   
   /* Step section base */
   .step-section {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
   
   @media (min-width: 768px) {
     .step-section {
-      padding: 4rem 3rem;
+      padding: 3rem 3rem;
     }
   }
   
