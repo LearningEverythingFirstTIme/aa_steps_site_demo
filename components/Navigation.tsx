@@ -102,22 +102,13 @@ export function Navigation() {
               onClick={() => setShowDailyReflection(false)}
               className="fixed inset-0 z-[60] bg-[var(--void)]/90 backdrop-blur-sm"
             />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              style={{
-                position: 'fixed',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: 'calc(100% - 2rem)',
-                maxWidth: '42rem',
-                maxHeight: '85vh',
-                zIndex: 70,
-              }}
-              className="bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto"
-            >
+            <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                className="w-full max-w-2xl max-h-[85vh] bg-[var(--void-light)] rounded-lg illuminated-border overflow-auto pointer-events-auto"
+              >
               <div className="p-6 md:p-10">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-[var(--gold)] text-sm tracking-[0.3em] uppercase font-display">
@@ -176,8 +167,8 @@ export function Navigation() {
                     Another Reflection
                   </button>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>
