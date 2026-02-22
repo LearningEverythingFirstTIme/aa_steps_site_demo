@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { steps, getRandomStep } from "@/lib/steps";
+import { steps, getRandomStep, dailyReflections, getRandomReflection } from "@/lib/steps";
 
 export function Navigation() {
   const [activeStep, setActiveStep] = useState(0);
   const [showDailyReflection, setShowDailyReflection] = useState(false);
-  const [dailyStep, setDailyStep] = useState(getRandomStep());
+  const [dailyReflection, setDailyReflection] = useState(getRandomReflection());
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function Navigation() {
   };
 
   const handleDailyReflection = () => {
-    setDailyStep(getRandomStep());
+    setDailyReflection(getRandomReflection());
     setShowDailyReflection(true);
   };
 
@@ -123,42 +123,26 @@ export function Navigation() {
                   </div>
 
                   <div className="text-center mb-8">
-                    <span className="font-display text-6xl md:text-8xl text-[var(--gold)]/20">
-                      {dailyStep.roman}
+                    <span className="font-display text-5xl md:text-6xl text-[var(--gold)]/30 uppercase tracking-widest">
+                      {dailyReflection.theme}
                     </span>
                   </div>
 
-                  <h3 className="font-body text-xl md:text-2xl text-[var(--text-primary)] mb-6 leading-relaxed">
-                    {dailyStep.title}
-                  </h3>
-
-                  <div className="p-4 md:p-6 bg-[var(--void)]/50 rounded-lg mb-6">
-                    <p className="text-[var(--text-secondary)] italic mb-3">
-                      &ldquo;{dailyStep.quote.text}&rdquo;
+                  <div className="p-6 md:p-8 bg-[var(--void)]/50 rounded-lg mb-6 illuminated-border">
+                    <p className="text-[var(--text-primary)] text-lg md:text-xl italic leading-relaxed mb-4">
+                      &ldquo;{dailyReflection.quote}&rdquo;
                     </p>
-                    <p className="text-[var(--text-muted)] text-sm">
-                      — {dailyStep.quote.source}
-                    </p>
-                  </div>
-
-                  <div className="p-4 md:p-6 border border-[var(--gold)]/20 rounded-lg">
-                    <p className="text-[var(--gold)] text-sm tracking-[0.2em] uppercase mb-2 font-display">
-                      Today&apos;s Question
-                    </p>
-                    <p className="text-[var(--text-secondary)] italic">
-                      {dailyStep.reflection}
+                    <p className="text-[var(--gold)] text-sm tracking-wide">
+                      — {dailyReflection.source}
                     </p>
                   </div>
 
                   <div className="flex gap-3 mt-8">
                     <button
-                      onClick={() => {
-                        setShowDailyReflection(false);
-                        scrollToStep(dailyStep.id);
-                      }}
+                      onClick={() => setShowDailyReflection(false)}
                       className="flex-1 px-4 py-3 bg-[var(--gold)] text-[var(--void)] font-display text-sm tracking-wide rounded hover:bg-[var(--gold-light)] transition-colors"
                     >
-                      Read Full Step
+                      Close
                     </button>
                     <button
                       onClick={handleDailyReflection}
